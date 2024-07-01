@@ -1,0 +1,224 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #fff; /* Adjust background color as needed */
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Header (Hero section) */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 100px 20px 20px;
+    background: #e6f7ff;
+    border-bottom: 1px solid #ccc;
+    animation: fadeIn 1s ease-in-out;
+    min-height: 100vh;
+}
+
+#hero img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-right: 30px;
+}
+
+.summary {
+    max-width: 600px;
+}
+
+.summary h1 {
+    margin: 0 0 10px;
+    color: #0073e6;
+}
+
+.summary p a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.summary p a:hover {
+    text-decoration: underline;
+}
+
+/* Sections styling */
+section {
+    padding: 0px; /* Adjust padding as needed */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative; /* Ensures relative positioning for child elements */
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #0073e6;
+}
+
+section .content {
+    max-width: 1200px; /* Adjust maximum width as needed */
+    margin: 0 auto;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Alternate content alignment */
+section .content .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+section .content .row .left,
+section .content .row .right {
+    width: 48%; /* Adjust width as needed */
+    text-align: left; /* Default alignment for left content */
+}
+
+section .content .row .left img,
+section .content .row .right img {
+    max-width: 100%; /* Ensure image stays within its container */
+    height: auto;
+    border-radius: 8px; /* Optional: Add border radius for images */
+}
+
+section .content .row .left {
+    order: 1; /* Ensure left content is first */
+}
+
+section .content .row .right {
+    order: 2; /* Ensure right content is second */
+    text-align: right;
+}
+
+/* Individual section background colors */
+#experience {
+    background-color: #f9e79f;
+}
+
+#education {
+    background-color: #f7dc6f;
+}
+
+#certifications {
+    background-color: #f5cba7;
+}
+
+#projects {
+    background-color: #a9cce3;
+}
+
+#achievements {
+    background-color: #aed6f1;
+}
+
+#skills {
+    background-color: #a3e4d7;
+}
+
+#additional {
+    background-color: #d5dbdb;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding-top: 80px;
+    }
+    #hero img {
+        width: 120px;
+        height: 120px;
+        margin-right: 20px;
+    }
+    section {
+        padding: 80px 20px;
+    }
+    section h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .summary {
+        max-width: 100%;
+        text-align: center;
+    }
+    /* Responsive adjustments for content alignment */
+    section .content .row {
+        flex-direction: column;
+    }
+    section .content .row .left,
+    section .content .row .right {
+        width: 100%;
+        text-align: left;
+    }
+}
